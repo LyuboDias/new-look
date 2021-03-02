@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>New Look</title>
+  </head>
+  <body>
+      <!-- ----title ------ -->
+      <div class="titile-container">
+        <h1 class="title">Chosen for you</h1>
+        <h3 class="subtitle">We think you will love these</h3>
+      </div>
+      <br>
+      <!-- ------search container----- -->
+      <div class="search-container">
+        <div class="subsearch">
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Search for item"
+          />
+        </div>
+        <div class="price">
+          <select name="price" id="price" class="select-opt">
+            <option disabled hidden selected>Price</option>
+            <option value="1000">All</option>
+            <option value="10">up to £10</option>
+            <option value="20">£10 - £20</option>
+            <option value="30">£20 - £30</option>
+            <option value="40">£30 - £40</option>
+            <option value="50">£40 - £50</option>
+          </select>
+        </div>
+        <div class="price">
+          <select name="prod-type" id="prod-type" class="select-opt">
+            <option disabled hidden selected>Type</option>
+            <option value="newlook">All</option>
+            <option value="coats-jackets">Coats-Jackets</option>
+            <option value="jeans">Jeans</option>
+            <option value="leggings">Leggings</option>
+            <option value="boots">Boots</option>
+            <option value="nightwear">Nightwear</option>
+            <option value="tops">Tops</option>
+          </select>
+        </div>
+      </div>
+      <br>
+      <!-- --------content container------------ -->
+      <div class="main">
+        <span class="span1 span" onclick="leftFunction()">&#139;</span>
+        <span class="span2 span" onclick="rightFunction()">&#155;</span>
+        <section>
+          <div id="img-box" class="section" ></div>
+        </section>
+      </div>
+    </div>
+    <!-- ----- POP UP----- -->
+
+    <div id="myModal" class="modal">
+      <span class="close" onclick="closeFunction()">&times;</span>
+      <img class="modal-content" id="img01" />
+      <div id="caption">
+        
+      </div>
+
+    <script type="text/javascript" src="./index.js"></script>
+  </body>
+</html>

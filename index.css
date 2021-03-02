@@ -1,0 +1,263 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background: linear-gradient(
+    -45deg,
+    rgb(235, 238, 218),
+    #fedae8,
+    #cef1fe,
+    #cdf9ee
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* -------title section------- */
+.title {
+  margin: 10px;
+  font-weight: 100;
+  font-size: 36px;
+}
+.subtitle {
+  opacity: 0.8;
+  font-weight: 100;
+}
+.titile-container {
+  margin: 0 auto;
+  text-align: center;
+}
+/* ----item not found message--- */
+.message {
+  margin: 150px auto;
+}
+.h2 {
+  font-size: 32px;
+  font-weight: lighter;
+}
+/* --------search section------------------ */
+
+.search-container {
+  max-width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+input {
+  max-width: 120px;
+  padding: 8px;
+  /* opacity: 0.8; */
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  line-height: 17px;
+  font-size: 14px;
+  color: black !important;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.select-opt {
+  background-color: rgba(255, 255, 255, 0.1);
+  opacity: 0.8;
+  padding: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  line-height: 17px;
+  font-size: 14px;
+}
+/* ---------content carousel------------ */
+.main {
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.span {
+  position: absolute;
+  top: 40%;
+  font-size: 60px;
+  font-weight: bold;
+  color: rgb(157, 157, 157);
+  cursor: pointer;
+  left: 10px;
+  z-index: 1;
+}
+.span:hover {
+  color: rgb(97, 97, 97);
+}
+.span:nth-of-type(2) {
+  left: 97%;
+  text-align: right;
+  margin: 0 auto;
+}
+.section {
+  padding: 10px 0;
+  width: 100%;
+  height: auto;
+  margin: 10px auto;
+  display: flex;
+  justify-content: left;
+  overflow-x: auto;
+}
+.section::-webkit-scrollbar {
+  visibility: hidden;
+}
+.img-box {
+  opacity: 0.7;
+  cursor: pointer;
+  transition: 0.3s;
+  height: 420px;
+  position: relative;
+  left: 0;
+  padding: 10px;
+  color: black;
+  transition: 0.5s;
+  margin: 5px auto;
+  box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.img-box:hover {
+  opacity: 1;
+}
+.img {
+  width: 280px;
+  border: 6px solid transparent;
+}
+.details {
+  max-width: 280px;
+}
+.price {
+  opacity: 0.7;
+}
+.div-link {
+  margin: 20px auto;
+}
+.link {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  border: 1px solid transparent;
+  padding: 5px 10px;
+  background: linear-gradient(
+    -45deg,
+    rgb(235, 238, 218),
+    #fedae8,
+    #cef1fe,
+    #cdf9ee
+  );
+  animation: gradient 15s ease infinite;
+  border-radius: 5px;
+  background-size: 400% 400%;
+}
+.link:hover {
+  background: linear-gradient(
+    -45deg,
+    rgb(225, 232, 187),
+    #ffc1d8,
+    #ade3f7,
+    #adf7e5
+  );
+  animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite;
+  transition: all ease 0.3s;
+  background-size: 400% 400%;
+}
+/* --- pop up - modal  ------- */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 400px;
+  max-width: 500px;
+  box-shadow: 2px 2px 20px rgba(250, 250, 250, 0.6);
+  border-radius: 3px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+
+  width: 60%;
+  max-width: 500px;
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+  height: auto;
+  font-size: 20px;
+}
+
+.modal-content,
+#caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 70%;
+  }
+}
